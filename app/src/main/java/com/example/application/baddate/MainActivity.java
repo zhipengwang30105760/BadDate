@@ -12,14 +12,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.TimePicker;
-
-import com.example.application.baddate.R;
+import android.widget.EditText;
+import android.util.Log;
 
 import java.text.DateFormat;
 import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity implements TimePickerDialog.OnTimeSetListener {
     private TextView mTextView;
+    private String message;
+    private String contact;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,6 +69,8 @@ public class MainActivity extends AppCompatActivity implements TimePickerDialog.
     private void startAlarm(Calendar c) {
         AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
         Intent intent = new Intent(this, AlertReceiver.class);
+        intent.putExtra("contact", contact);
+        intent.putExtra("message", message);
         PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 1, intent, 0);
 
         if (c.before(Calendar.getInstance())) {
@@ -84,5 +88,14 @@ public class MainActivity extends AppCompatActivity implements TimePickerDialog.
 
         alarmManager.cancel(pendingIntent);
         mTextView.setText("Canceled");
+    }
+
+    public void sendMessage(View view)
+    {
+        EditText editText = findViewById(R.id.contact);
+        EditText edit2 = findViewById(R.id.message);
+
+        contact = editText.getText().toString();
+        message = edit2.getText().toString();
     }
 }
