@@ -46,6 +46,13 @@ public class MainActivity extends AppCompatActivity implements TimePickerDialog.
                 cancelAlarm();
             }
         });
+
+        Button inst = findViewById(R.id.inst_button);
+        inst.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, InstActivity.class));
+            }
+        });
     }
 
     @Override
