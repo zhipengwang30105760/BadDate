@@ -15,8 +15,12 @@ import com.example.application.baddate.R;
 public class NotificationHelper extends ContextWrapper {
     public static final String channelID = "channelID";
     public static final String channelName = "Channel Name";
+    public String contact;
+    public String message;
 
     private NotificationManager mManager;
+
+
 
     public NotificationHelper(Context base) {
         super(base);
@@ -42,11 +46,16 @@ public class NotificationHelper extends ContextWrapper {
 
         return mManager;
     }
+    public void setContact(String contact){
+        this.contact = contact;
+    }
+
+    public void setMessage(String message) { this.message = message; }
 
     public NotificationCompat.Builder getChannelNotification() {
         return new NotificationCompat.Builder(getApplicationContext(), channelID)
-                .setContentTitle("Message!")
-                .setContentText("Your mom send you a message.")
+                .setContentTitle(contact)
+                .setContentText(message)
                 .setSmallIcon(R.drawable.ic_message);
     }
 }
