@@ -78,6 +78,8 @@ public class MainActivity extends AppCompatActivity implements TimePickerDialog.
         Intent intent = new Intent(this, AlertReceiver.class);
         intent.putExtra("contact", contact);
         intent.putExtra("message", message);
+       // intent.setData(Uri.parse("tel:12312312"));
+        // startActivity(intent);
         PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 1, intent, 0);
 
         if (c.before(Calendar.getInstance())) {
