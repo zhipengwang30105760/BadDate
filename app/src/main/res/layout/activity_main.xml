@@ -6,6 +6,37 @@
     android:layout_height="match_parent"
     tools:context="com.example.application.baddate.MainActivity">
 
+
+    <EditText
+        android:id="@+id/contact"
+        android:inputType="textPersonName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/button_timepicker"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="140dp"
+        android:hint="enter a contact" />
+
+    <EditText
+        android:id="@+id/message"
+        android:inputType="textMultiLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/button_timepicker"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="220dp"
+        android:hint="enter a text message"/>
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="sendMessage"
+        android:layout_above="@id/button_timepicker"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="80dp"
+        android:text="submit before alarm"/>
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
