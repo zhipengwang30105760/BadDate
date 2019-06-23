@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity implements TimePickerDialog.
         }
         */
         alarmManager.setExact(AlarmManager.RTC_WAKEUP, c.getTimeInMillis(), pendingIntent);
-
+        // call a notification after triggle the alarm
 
     }
 
