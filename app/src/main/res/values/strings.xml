@@ -7,4 +7,7 @@
         You will then select the time of day you need a fake text sent. \nThat\'s it!\n Clicking \"Done\" will send you to the summary screen where you will see your countdown timer and the message info you can expect.\n
         If you feel like you just aren\'t sure about this date yet, you can add 15 minutes by clicking the \"extend\" button at any time.\n
         If you end up having a great time just click the \"Cancel\" button to deactivate your fake emergency.\n Good luck!! We hope you have a great time!</p></string>
+
+    <string name="settingsButton">Get Started</string>
+    <string name="instructionsButton">Instructions</string>
 </resources>
