@@ -19,13 +19,14 @@
 
     <EditText
         android:id="@+id/message"
-        android:inputType="textMultiLine"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@id/button_timepicker"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="220dp"
-        android:hint="enter a text message"/>
+        android:layout_alignStart="@+id/button_timepicker"
+        android:layout_marginStart="-22dp"
+        android:layout_marginBottom="208dp"
+        android:hint="enter a text message"
+        android:inputType="textMultiLine" />
 
     <Button
         android:id="@+id/button3"
@@ -60,8 +61,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/button_timepicker"
+        android:layout_alignEnd="@+id/contact"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="27dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="-1dp"
         android:text="cancel alarm" />
 
     <Button
@@ -69,8 +72,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/button_cancel"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="141dp"
+        android:layout_alignStart="@+id/contact"
+        android:layout_marginStart="-3dp"
+        android:layout_marginTop="144dp"
         android:text="Instructions" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="140dp"
+        android:layout_marginBottom="191dp"
+        android:text="EnablePhoneCall" />
 
 </RelativeLayout>

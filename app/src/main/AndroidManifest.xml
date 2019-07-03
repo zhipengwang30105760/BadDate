@@ -16,9 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".InstActivity" />
-        <activity android:name=".MainActivity">
-
+        <activity android:name=".InstActivity"
+            android:parentActivityName = ".HomePage"/>
+        <activity android:name=".MainActivity"
+            android:parentActivityName = ".HomePage">
         </activity>
 
         <receiver android:name=".AlertReceiver" />
@@ -27,5 +28,7 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
     </application>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
 
 </manifest>

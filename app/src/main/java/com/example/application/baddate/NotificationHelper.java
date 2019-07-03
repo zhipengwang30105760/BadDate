@@ -18,6 +18,7 @@ public class NotificationHelper extends ContextWrapper {
     public String contact;
     public String message;
 
+
     private NotificationManager mManager;
 
 
