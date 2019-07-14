@@ -128,21 +128,24 @@ public class MainActivity extends AppCompatActivity implements TimePickerDialog.
                 }
         }.start();
     }
+    /*
     private void StartPhoneCall(){
-
-
         Intent intent = new Intent(Intent.ACTION_CALL);
         //PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 1, intent, 0);
-        intent.setData(Uri.parse("tel:1232312"));
+        intent.setData(Uri.parse("tel:(650) 555-1212"));
         if (ContextCompat.checkSelfPermission(getApplicationContext(), CALL_PHONE) == PackageManager.PERMISSION_GRANTED) {
             startActivity(intent);
         } else {
             requestPermissions(new String[]{CALL_PHONE}, 1);
         }
        // startActivity(intent);
-
-
     }
+    */
+    private void StartPhoneCall(){
+        Intent intent = new Intent(MainActivity.this, FakeCallRingling.class);
+        startActivity(intent);
+    }
+
 
     private void startAlarm(Calendar c) {
         AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
@@ -158,6 +161,7 @@ public class MainActivity extends AppCompatActivity implements TimePickerDialog.
         alarmManager.setExact(AlarmManager.RTC_WAKEUP, c.getTimeInMillis(), pendingIntent);
 
     }
+
 
     private void cancelAlarm() {
         AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
