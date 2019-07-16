@@ -143,6 +143,7 @@ public class MainActivity extends AppCompatActivity implements TimePickerDialog.
     */
     private void StartPhoneCall(){
         Intent intent = new Intent(MainActivity.this, FakeCallRingling.class);
+        intent.putExtra("contact", contact);
         startActivity(intent);
     }
 
